@@ -24,3 +24,8 @@ def tokenize(sql):
         if kind != 'WHITESPACE':
             tokens.append((kind, value))
     return tokens
+
+if __name__ == "__main__":
+    sql_query = "SELECT Name, Age FROM emp where Subject='Physics' and Age =28"
+    tokens = tokenize(sql_query)
+    print(tokens)
